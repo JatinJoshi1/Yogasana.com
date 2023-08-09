@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500&family=Work+Sans:wght@300&display=swap');
+.hero{
+  text-align: center;
+  display: flex;
+  gap: 1rem;
+}
+#mt{
+  font-size: 5rem;
+  color: #009CF3;
+  margin-left: 70px;
+  margin-top: 200px;
+}
+#st{
+  font-size: 2rem;
+  margin-left: 250px;
+}
+.para{
+  margin-left: 100px;
+  text-align: left;
+  font-size: 23px;
+  font-family: 'Edu SA Beginner';
+}
+#ps{
+  margin-top: 30px;
+}
+#hero_image{
+  height: 600px;
+  width: 600px;
+}
+#bg{
+  position: absolute;
+  height:100px;
+  width: 100px;
+  margin-left: -700px;
+  margin-top: 200px;
+  opacity: 0.4;
+}
+#design{
+  position: absolute;
+  margin-left: -1280px;
+  width: 1300px;
+  height: 700px;
+  z-index: -1;
+}
+#wave{
+  position: absolute;
+  z-index: -1;
+}
+@media only screen and (max-width:425px){
+  #ps{
+    margin-top: 10px;
+  }
+  #pd{
+    margin-right: 10px;
+  }
+  .para{
+    margin-right: 1px;
+    text-align: left;
+    font-size: 15px;
+    font-family: 'Edu SA Beginner';
+  }
+  #mt{
+    font-size: 4rem;
+    color: #009CF3;
+    margin-top: 200px;
+    margin-left: -5px;
+  }
+  #st{
+    font-size: 1.5rem;
+    margin-left: 50px;
+    }
+  #hero_image{
+    height:270px;
+    width: 270px;
+    position: absolute;
+    margin-left: -300px;
+    margin-top: -25px;
+  }
+  #back{
+    display: none;
+  }
+
+}
+.hero{
+  animation:  fadeIn 1s ease;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

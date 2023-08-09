@@ -29,7 +29,7 @@ function signIn() {
     const savedUser = JSON.parse(localStorage.getItem(username));
     if (savedUser && savedUser.password === password) {
         localStorage.setItem('loggedInUser', JSON.stringify(savedUser));
-        window.location.href = 'yogasana.com.html';
+        window.location.href = 'yogasana.com';
     } else {
         alert('Invalid username or password');
     }

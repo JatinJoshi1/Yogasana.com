@@ -60,7 +60,7 @@ const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 if (loggedInUser) {
     updateUserInfo(loggedInUser);
 } else {
-    window.location.href = 'index.html';
+    window.location.href = '/';
 }
 
 // Delete account function
@@ -71,7 +71,7 @@ function deleteAccount() {
         localStorage.removeItem(loggedInUser.username);
         localStorage.removeItem('loggedInUser');
         alert('Account deleted successfully. You will be redirected to the registration page.');
-        window.location.href = 'index.html';
+        window.location.href = '/';
     }
 }
 

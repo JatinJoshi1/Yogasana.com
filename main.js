@@ -83,7 +83,7 @@ function deleteAccount() {
 // Sign out function
 function signOut() {
     localStorage.removeItem('loggedInUser');
-    window.location.href = 'signup.html';
+    window.location.href = './';
 }
 // Simulate content loading
 window.addEventListener('load', () => {

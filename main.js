@@ -42,11 +42,16 @@ function toggleNightModePopup() {
 
 // Event listener for night mode switch
 const switchBtn = document.querySelector('.radio-btn');
+const navBar = document.querySelector('nav'); // Select the navigation bar element
+
 switchBtn.addEventListener('click', () => {
     const radioInner = document.querySelector('.radio-inner');
     document.body.classList.toggle('dark-mode');
+    navBar.classList.toggle('dark-mode'); // Toggle the dark mode class for the navigation bar
+
     radioInner.classList.toggle('active');
 });
+
 
 // Update user information function
 function updateUserInfo(user) {
@@ -80,3 +85,13 @@ function signOut() {
     localStorage.removeItem('loggedInUser');
     window.location.href = 'signup.html';
 }
+// Simulate content loading
+window.addEventListener('load', () => {
+  // Content loaded, gradually hide preloader
+  setTimeout(() => {
+    const preloader = document.querySelector('.preloader');
+    preloader.style.transition = 'opacity 2s ease, z-index 2s ease';
+    preloader.style.opacity = '0';
+    preloader.style.zIndex = '-1';
+  }, 3000); // Add a delay of 2000ms (2 seconds) before hiding the preloader
+});

@@ -14,18 +14,15 @@
 
 .card-content {
   padding: 20px;
-  background-color: #fff;
 }
 
 .card h2 {
   font-size: 20px;
-  color: #333;
   margin-bottom: 10px;
 }
 
 .card p {
   font-size: 14px;
-  color: #777;
 }
 
 .card button {
@@ -39,11 +36,6 @@
   border-radius: 5px;
   cursor: pointer;
 }
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
 .card1{
   margin-left: 100px;
 }
@@ -51,7 +43,6 @@
   display: flex;
   justify-content: space-around;
 }
-
 .card {
   width: 350px;
   border-radius: 10px;
@@ -77,4 +68,30 @@
     height: 200px;
     width: 200px;
   }
+}
+.flex-container {
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           padding: 20px;
+       }
+
+       .session-text {
+           font-size: 1rem;
+           display: flex;
+           align-items: center;
+           margin-right:-15px;
+       }
+#tb{
+  margin-left: -15px;
+}
+#ti{
+  margin-left: -15px;
+  font-size: 1.5rem;
+}
+#in{
+  margin-top: 35px;
+}
+#ad{
+  margin-top: 22px;
 }

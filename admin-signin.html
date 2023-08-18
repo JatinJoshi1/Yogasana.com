@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<style>
+       body {
+           font-family: Arial, sans-serif;
+           background-color: #f2f2f2;
+           margin: 0;
+           padding: 0;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+       }
+
+       h2 {
+           text-align: center;
+           margin-top: -300px;
+           margin-right: -250px;
+       }
+
+       #loginForm {
+           background-color: #fff;
+           padding: 20px;
+           border-radius: 8px;
+           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+           width: 350px;
+       }
+
+       label {
+           display: block;
+           font-weight: bold;
+           margin-bottom: 5px;
+       }
+
+       input[type="text"],
+       input[type="password"] {
+           width: 100%;
+           padding: 10px;
+           margin-bottom: 10px;
+           border: 1px solid #ccc;
+           border-radius: 4px;
+       }
+
+       button {
+           background-color: #007bff;
+           color: #fff;
+           border: none;
+           padding: 10px 20px;
+           border-radius: 4px;
+           cursor: pointer;
+       }
+
+       button:hover {
+           background-color: #0056b3;
+       }
+       </style>
+<body>
+
+<h2>Admin Login</h2>
+
+<form id="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username"><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br>
+
+    <button type="button" onclick="attemptLogin()">Login</button>
+</form>
+
+<script>
+function attemptLogin() {
+    var usernameInput = document.getElementById("username").value;
+    var passwordInput = document.getElementById("password").value;
+
+    // Check the entered credentials
+    if (usernameInput === "YADMINJ" && passwordInput === "Jj1234#456") {
+        // Successful login
+        window.location.href = "notice-editor.html";
+    } else {
+        // Unsuccessful login
+        alert("You are not the admin.");
+        window.location.href = "./";
+    }
+}
+</script>
+
+</body>
+</html>

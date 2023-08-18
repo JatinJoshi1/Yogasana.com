@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notice Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        #noticeForm {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        textarea,
+        input[type="datetime-local"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #notices {
+            margin-top: 20px;
+        }
+
+        .notice-card {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+
+        .notice-card h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .notice-card p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .notice-card button {
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .notice-card button:hover {
+            background-color: #e04a32;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Notice Editor</h2>
+
+<form id="noticeForm">
+    <label for="noticeHeading">Notice Heading:</label>
+    <input type="text" id="noticeHeading" name="noticeHeading"><br><br>
+
+    <label for="noticeContent">Notice Content:</label>
+    <textarea id="noticeContent" name="noticeContent"></textarea><br><br>
+
+    <label for="noticeDateTime">Date and Time:</label>
+    <input type="datetime-local" id="noticeDateTime" name="noticeDateTime"><br><br>
+
+    <button type="button" onclick="submitNotice()">Submit</button>
+</form>
+<div id="notices"></div>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script>
+// Initialize Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyABkhuAfw04irzVAoL88W10I-oA2HRa7-0",
+authDomain: "notice-board-a3a7f.firebaseapp.com",
+databaseURL: "https://notice-board-a3a7f-default-rtdb.firebaseio.com",
+projectId: "notice-board-a3a7f",
+storageBucket: "notice-board-a3a7f.appspot.com",
+messagingSenderId: "773569603794",
+appId: "1:773569603794:web:b7516a962a950d28b4650b"
+};
+
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
+
+function submitNotice() {
+    var noticeHeading = document.getElementById("noticeHeading").value;
+    var noticeContent = document.getElementById("noticeContent").value;
+    var noticeDateTime = document.getElementById("noticeDateTime").value;
+
+    // Push notice data to Firebase Realtime Database
+    database.ref("notices").push({
+        heading: noticeHeading,
+        content: noticeContent,
+        dateTime: noticeDateTime
+    });
+
+    alert("Notice submitted successfully!");
+}
+// Get a reference to the "notices" node
+const noticesRef = firebase.database().ref("/notices");
+noticesRef.once("value", function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+        var notice = childSnapshot.val();
+        console.log("Notice Heading:", notice.heading);
+        console.log("Notice Content:", notice.content);
+        console.log("Date and Time:", notice.dateTime);
+    });
+});
+
+</script>
+<script>
+database.ref("notices").on("value", function(snapshot) {
+    var noticesDiv = document.getElementById("notices");
+    noticesDiv.innerHTML = ""; // Clear previous notices
+
+    snapshot.forEach(function(childSnapshot) {
+        var notice = childSnapshot.val();
+        var noticeDiv = document.createElement("div");
+        noticeDiv.innerHTML = "<h3>" + notice.heading + "</h3><p>" + notice.content + "</p><p>Date and Time: " + notice.dateTime + "</p>";
+
+        var deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.addEventListener("click", function() {
+            deleteNotice(childSnapshot.key);
+        })
+
+        noticeDiv.appendChild(deleteButton);
+        noticesDiv.appendChild(noticeDiv);
+    });
+});
+
+function deleteNotice(noticeKey) {
+    database.ref("notices").child(noticeKey).remove();
+}
+</script>
+</body>
+</html>

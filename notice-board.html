@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notice Board</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500&family=Roboto+Mono:wght@100&family=Work+Sans:wght@300&display=swap');
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+      }
+        #notices {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            border-radius: 10px;
+            width: 800px;
+            padding: 20px;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+        .nd {
+          overflow-x: hidden;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .nd-row {
+            display: flex;
+            align-items: center;
+        }
+        .nd i {
+            font-size: 24px;
+            color: rgba(251, 161, 0, 0.53);
+            margin-right: 10px;
+        }
+        .nd h3 {
+            margin: 0;
+        }
+        .nd p {
+            margin: 5px 0;
+        }
+        .delete-button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+        button{
+          display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="notices"></div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+<script src="admin-signin.js" charset="utf-8"></script>
+
+</body>
+</html>

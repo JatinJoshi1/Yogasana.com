@@ -1,0 +1,83 @@
+#dh{
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+}
+#dhb{
+  border: none;
+  background-color: transparent;
+  margin-right: 30px;
+  font-size: 1.5rem;
+  color: skyblue;
+  position: relative;
+}
+#dhb::before{
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: skyblue;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1s ease, opacity 0.3s ease;
+}
+#dhb:hover::before{
+  opacity: 1;
+  transform: scaleX(1);
+}
+.dc{
+  margin-top: 50px;
+  margin-left: 100px;
+  display: flex;
+  width: 900px;
+}
+.dc img{
+  width: 300px;
+}
+.dc-content{
+  display: flex;
+  flex-direction: column;
+}
+hr{
+  position: absolute;
+  width: 85%;
+  background-color: grey;
+  opacity: 0.1;
+  z-index: -1;
+  margin-left: 100px;
+  margin-top: 15px;
+  height: 2px;
+}
+#diseases{
+  margin-top: 50px;
+}
+#diy{
+  background-color:#ffa20d;
+  width: 230px;
+  margin-left: -10px;
+}
+#diy:hover{
+  border-color:#ffa20d;
+  background-color: transparent;
+}
+#dia{
+  background-color: #0bd884;
+  margin-left: 10px;
+}
+#dia:hover{
+  background-color: transparent;
+  border-color: #0bd884;
+}
+#dfc{
+  display: flex;
+}
+#dimg{
+  height: 320px;
+}
+#did{
+  width: 230px;
+  margin-left: -10px;
+}

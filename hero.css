@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500&family=Work+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500&family=Work+Sans:wght@300&display=swap');
 .hero{
   text-align: center;
   display: flex;
@@ -13,15 +13,6 @@
 #st{
   font-size: 2rem;
   margin-left: 250px;
-}
-.para{
-  margin-left: 100px;
-  text-align: left;
-  font-size: 23px;
-  font-family: 'Edu SA Beginner';
-}
-#ps{
-  margin-top: 30px;
 }
 #hero_image{
   height: 600px;
@@ -45,41 +36,6 @@
 #wave{
   position: absolute;
   z-index: -1;
-}
-@media only screen and (max-width:425px){
-  #ps{
-    margin-top: 10px;
-  }
-  #pd{
-    margin-right: 10px;
-  }
-  .para{
-    margin-right: 1px;
-    text-align: left;
-    font-size: 15px;
-    font-family: 'Edu SA Beginner';
-  }
-  #mt{
-    font-size: 4rem;
-    color: #009CF3;
-    margin-top: 200px;
-    margin-left: -5px;
-  }
-  #st{
-    font-size: 1.5rem;
-    margin-left: 50px;
-    }
-  #hero_image{
-    height:270px;
-    width: 270px;
-    position: absolute;
-    margin-left: -300px;
-    margin-top: -25px;
-  }
-  #back{
-    display: none;
-  }
-
 }
 .hero{
   animation:  fadeIn 1s ease;
@@ -109,4 +65,14 @@ body::-webkit-scrollbar-thumb:hover {
 
 body::-webkit-scrollbar-track {
   background-color: #f2f2f2; /* Color of the scrollbar track */
+}
+#pd{
+  margin-top: 30px;
+  margin-left: 100px;
+  text-align: left;
+}
+#pd p{
+  font-family: 'Edu SA Beginner';
+  font-size: 1.3rem;
+  font-weight: 500;
 }

@@ -7,11 +7,12 @@
     <title>Yogasana.com</title>
     <link rel="stylesheet" href="navbar.css" />
       <link rel="stylesheet" href="hero.css" />
-        <link rel="stylesheet" href="courses.css" />
+      <link rel="stylesheet" href="courses.css" />
+      <link rel="stylesheet" href="diseases.css">
     <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="icon" href="icons.png">
+    <link rel="icon" href="asset.png">
   </head>
-  <body >
+  <body>
     <div class="yoga-loader preloader">
   <div class="loader-circle"></div>
   <div class="loader-yoga-pose"></div>
@@ -85,7 +86,7 @@
               <span class="line"></span>
             </div>
             <li class="item">
-              <a href="#" class="link flex">
+              <a href="notice-board" class="link flex">
                 <i class="bx bx-flag"></i>
                 <span>Notice Board</span>
               </a>
@@ -156,10 +157,10 @@
   <h1 id="mt">Yogasana</h1>
   <h2 id="st">-Yoga For A Better Life</h2>
   <div id="pd">
-  <p class="para" id="ps">Yogsana will Help you to learn yoga in a easy and effective way.It has</p>
-  <p class="para" id="ps2">various courses like Beginner, Intermediate and many more. It also has a</p>
-  <p class="para">feature which has various diseases listed in it and there is Yoga solution,</p>
-  <p class="para">Ayurvedic solution and diet chart for each disease. </p>
+  <p>Yogsana will Help you to learn yoga in a easy and effective way.It has
+  various courses like Beginner, Intermediate and many more. It also has a
+  feature which has various diseases listed in it and there is Yoga solution,
+  Ayurvedic solution and diet chart for each disease. </p>
 </div>
 </div>
 <div id="img__container">
@@ -167,24 +168,29 @@
   <img id="bg" src="asset.png">
 </div>
   </div>
+  <br>
   <div id"courses">
+    <div id="ch">
+      <h1 id="cht">Courses</h1>
+      <button id="chb">View All</button>
+    </div>
     <div class="card-container">
-    <div class="card1 card">
+    <div class="card1 card nc">
   <img src="log.png" alt="Card Image" />
   <div class="card-content">
     <div class="flex-container">
        <h1 id="tb">Beginner</h1>
        <div class="session-text">
            <i id="t" class='bx bx-timer'></i>
-           <span>3 Sessions</span>
+           <span>8 Sessions</span>
        </div>
    </div>
     <p>This Course Is For Those Who Have Just Started Yoga.</p>
-    <button>Learn More</button>
+    <button class="hb">Learn More</button>
   </div>
 </div>
-<div class="card">
-<img src="inter.webp" alt="Card Image" />
+<div class="card nc1">
+<img src="inter.jpg" alt="Card Image" />
 <div class="card-content">
 <div class="flex-container">
    <h1 id="ti">Intermediate</h1>
@@ -194,24 +200,57 @@
    </div>
 </div>
 <p>This Course Is For Those Who Know The Basics Of Yoga.</p>
-<button id="in">Learn More</button>
+<button class="hb"id="in">Learn More</button>
 </div>
 </div>
-<div class="card">
+<div class="card nc2">
 <img src="ad.jpg" alt="Card Image" />
 <div class="card-content">
 <div class="flex-container">
    <h1 id="tb">Advance</h1>
    <div class="session-text">
        <i id="t" class='bx bx-timer'></i>
-       <span>8 Sessions</span>
+       <span>3 Sessions</span>
    </div>
 </div>
 <p>This Course Is For Those Who Know Intermediate Level Of Yoga.</p>
-<button id="ad">Learn More</button>
+<button class="hb" id="ad">Learn More</button>
 </div>
 </div>
 </div>
+  </div>
+  <div id="diseases">
+    <div id="dh">
+      <h1 id="cht">Diseases</h1>
+      <button id="dhb">View All</button>
+    </div>
+    <hr>
+    <div id="dfc">
+    <div class="card dc nc3">
+    <img src="Indigestion.jpg" alt="Card Image" />
+    <div class="card-content dc-content">
+    <div class="flex-container">
+       <h1 id="ti">Indigestion</h1>
+    </div>
+    <p>Indigestion is a common problem nowdays.</p>
+    <button class="hb"id="diy">Yoga Solution</button>
+    <button class="hb"id="dia">Ayurvedic Solution</button>
+    <button class="hb"id="did">Diet Chart</button>
+    </div>
+    </div>
+    <div class="card dc nc4">
+    <img src="diabetes.png" alt="Card Image"  id="dimg"/>
+    <div class="card-content dc-content">
+    <div class="flex-container">
+       <h1 id="ti">Indigestion</h1>
+    </div>
+    <p>Diabetes is a common problem nowdays.</p>
+    <button class="hb"id="diy">Yoga Solution</button>
+    <button class="hb"id="dia">Ayurvedic Solution</button>
+    <button class="hb"id="did">Diet Chart</button>
+    </div>
+    </div>
+    <div>
   </div>
   </div>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

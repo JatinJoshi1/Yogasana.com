@@ -42,13 +42,21 @@ function toggleNightModePopup() {
 
 // Event listener for night mode switch
 const switchBtn = document.querySelector('.radio-btn');
-const navBar = document.querySelector('nav'); // Select the navigation bar element
-
+const navBar = document.querySelector('nav');
+const card = document.querySelector('.nc');
+const card1 = document.querySelector('.nc1');
+const card2 = document.querySelector('.nc2');
+const card3 = document.querySelector('.nc3');
+const card4 = document.querySelector('.nc4');
 switchBtn.addEventListener('click', () => {
     const radioInner = document.querySelector('.radio-inner');
     document.body.classList.toggle('dark-mode');
     navBar.classList.toggle('dark-mode'); // Toggle the dark mode class for the navigation bar
-
+    card.classList.toggle('dark-mode-card');
+      card1.classList.toggle('dark-mode-card');
+      card2.classList.toggle('dark-mode-card');
+      card3.classList.toggle('dark-mode-card');
+      card4.classList.toggle('dark-mode-card');
     radioInner.classList.toggle('active');
 });
 

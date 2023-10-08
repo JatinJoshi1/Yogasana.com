@@ -1,38 +1,78 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yogasana_Landing_Page</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page With Light/Dark Mode</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <main>
+      <div class="big-wrapper light">
+        <img src="./img/shape.png" alt="" class="shape" />
 
-    <section>
-      <header>
+        <header>
+          <div class="container">
+            <div class="logo">
+              <img src="./img/logo.png" alt="Logo" />
+              <h3>Danvo in a new branch</h3>
+            </div>
 
-        <h2><a href="#" class="logo">Yogasana</a></h2>
-        <div class="navigation">
-          <a class="n" href="#">Home</a>
-          <a class="n" href="#">Info</a>
-          <a  href="signup.html"><button type="button" name="button" id="bt">Get Started</button></a>
+            <div class="links">
+              <ul>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#" class="btn">Sign up</a></li>
+              </ul>
+            </div>
 
+            <div class="overlay"></div>
+
+            <div class="hamburger-menu">
+              <div class="bar"></div>
+            </div>
+          </div>
+        </header>
+
+        <div class="showcase-area">
+          <div class="container">
+            <div class="left">
+              <div class="big-title">
+                <h1>Future is here,</h1>
+                <h1>Start Exploring now.</h1>
+              </div>
+              <p class="text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Delectus eius distinctio odit, magni magnam qui ex perferendis
+                vitae!
+              </p>
+              <div class="cta">
+                <a href="#" class="btn">Get started</a>
+              </div>
+            </div>
+
+            <div class="right">
+              <img src="./img/person.png" alt="Person Image" class="person" />
+            </div>
+          </div>
         </div>
-      </header>
-      <div class="content">
-        <div class="info">
-          <h2>Yogasana <br><span>Yoga For A Better Life</span></h2>
-          <br><br>
-          <a href="signup.html" class="info-btn" id="btn">Get Started</a>
+
+        <div class="bottom-area">
+          <div class="container">
+            <button class="toggle-btn">
+              <i class="far fa-moon"></i>
+              <i class="far fa-sun"></i>
+            </button>
+          </div>
         </div>
       </div>
-      <div class="media-icons">
-        <a  href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
-    </section>
+    </main>
 
+    <!-- JavaScript Files -->
+
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>

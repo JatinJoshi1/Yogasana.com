@@ -1,4 +1,4 @@
-.card {
+.cardc{
   width: 300px;
   border-radius: 10px;
   overflow: hidden;
@@ -6,7 +6,7 @@
   transition: transform 0.3s ease;
 }
 
-.card img {
+.cardc img {
   width: 100%;
   height: 300px;
   object-fit: cover;
@@ -16,16 +16,16 @@
   padding: 20px;
 }
 
-.card h2 {
+.cardc h2 {
   font-size: 20px;
   margin-bottom: 10px;
 }
 
-.card p {
+.cardc p {
   font-size: 14px;
 }
 
-.card button {
+.cardc button {
   display: block;
   width: 100%;
   padding: 10px;
@@ -44,7 +44,7 @@
   display: flex;
   justify-content: space-around;
 }
-.card {
+.cardc {
   width: 350px;
   border-radius: 10px;
   overflow: hidden;
@@ -53,7 +53,7 @@
   margin-right: 20px; /* Add some space between cards */
 }
 
-.card:last-child {
+.cardc:last-child {
   margin-right: 0; /* Remove margin from the last card to avoid extra space */
 }
 @media only screen and (max-width:425px){
@@ -65,7 +65,7 @@
   .card1{
     margin-left: 0px;
   }
-  .card{
+  .cardc{
     height: 200px;
     width: 200px;
   }
@@ -138,7 +138,7 @@
   opacity: 1;
   transform: scaleX(1);
 }
-#ch::after{
+/* #ch::after{
  content: "";
  position: absolute;
  bottom: -70px;
@@ -150,7 +150,7 @@
  opacity: 0.1;
  z-index: -1;
  margin-left: -2px;
-}
+} */
 .card-container{
   margin-top: 40px;
 }

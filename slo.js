@@ -29,7 +29,7 @@ function signIn() {
     const savedUser = JSON.parse(localStorage.getItem(username));
     if (savedUser && savedUser.password === password) {
         localStorage.setItem('loggedInUser', JSON.stringify(savedUser));
-        window.location.href = 'Home';
+        window.location.href = 'Home.html';
     } else {
         alert('Invalid username or password');
     }
